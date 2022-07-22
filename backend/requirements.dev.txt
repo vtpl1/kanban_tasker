@@ -1,0 +1,11 @@
+isort
+pycln
+black
+bump2version
+coverage
+cython
+pytest
+playwright
+pytest-playwright
+yapf
+wheel
