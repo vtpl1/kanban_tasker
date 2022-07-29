@@ -1,0 +1,114 @@
+// Input Element
+.input-wrap{
+    position: relative;
+    svg{
+        width: 20px;
+        height: 20px;
+    }
+    .label-icon{
+        position: absolute;
+        top: 0px;
+        left: 10px;
+    }
+    .inputEle{
+        font-family: 'Rubik';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        color: $white;
+        width: 486px;
+        // width: 100%;
+        height: 40px;
+        border-radius: 4px;
+        border: 1px solid $white-30;
+        background: $white-5;
+        padding-left: 40px;
+        padding-right: 40px;
+
+
+        &.ng-touched.ng-invalid{
+            border-color: red;
+        }
+
+        &::placeholder{
+            font-family: 'Rubik';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+            color: $white-30;
+        }
+    }
+}
+
+// Search Input Element
+.searchInput-wrap{
+    @extend .input-wrap;
+    .inputEle{
+        padding-right: 80px;
+    }
+
+   .filter-wrap{
+        // width: 76px;
+        // padding: 4px 8px;
+        position: absolute;
+        top: -1px;
+        right: 12px;
+        // display: flex;
+        // flex-direction: row;
+        // align-items: center;
+        color: $white-30;
+        background: transparent;
+
+        .profile-container{
+            .dropdown{
+                width: 60px;
+                gap: 4px;
+                .selected-item{
+                    width: unset;
+                }
+            }
+        }
+   }
+}
+
+// Buttons
+.btn{
+    font-family: 'Rubik',sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    cursor: pointer;
+    width: 160px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    svg{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+// Primary Button
+.primary-btn{
+    background: $stateBlue;
+    color: $white;
+}
+
+// Secondary Button
+.secondary-btn{
+    background: $white-8;
+    color: $white;
+}
+
+// Tertiary Button
+.tertiary-btn{
+    background: transparent;
+    color: $white-60;
+    padding: 0;
+}
+

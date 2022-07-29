@@ -1,0 +1,169 @@
+
+// Logo
+.logo{
+    width: 128px;
+    height: 40px;
+}
+
+// Dropdown 
+.dropdown{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 9.24px;
+    cursor: pointer;
+
+    .selected-item{
+        width: 51px;
+        color: $white-60;
+    }
+
+    .dropdown-arrow{
+        path{
+            fill: $white-60;
+        }
+    }
+
+    &.active{
+        .selected-item{
+            color: $white;
+        }
+        .dropdown-arrow{
+            path{
+                fill: $white;
+            }
+        }
+    }
+}
+.dropdown-items-container{
+    list-style: none;
+    width: 240px;
+    background: $white-15;
+    padding: 8px;
+    border-radius: 8px;
+    z-index: 1;
+
+    .dropdown-item{
+        border-radius: 4px;
+        padding: 8px 10px;
+        cursor: pointer;
+        margin-top: 4px;
+        color: $white;
+
+        &:hover{
+            background: $white-8;
+        }
+
+        &:first-child{
+            margin-top: 0px;
+        }
+    }
+}
+
+// Overview Cards
+.overview-cards{
+    max-width: 235px;
+    width: 100%;
+    border: 1px solid $white-15;
+    border-radius: 8px;
+    padding: 16px;
+
+    h2{
+        color: $white;
+    }
+
+    p{
+        color: $white-60;
+    }
+}
+
+// Progress Card in Overview Cards
+.progress-card{
+    position: relative;
+    height: 176px;
+    .progress-content{
+        position: absolute;
+        bottom: 16px;
+
+
+        &.warn{
+            .progress-head{
+                color: $warning;
+            }
+            .progress-para{
+                color: $white;
+                img{
+                    display: block;
+                }
+            }
+        }
+        .progress-para{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            img{
+                width: 16px;
+                height: 16px;
+                margin-right: 4px;
+                display: none;
+            }
+        }
+    }
+    h2{
+        color: #A3A3F5;
+    }
+}
+
+//Overdue Card in Overview Cards
+.overdue-card{
+    .overdue-content{
+        &.warn{
+            h2{
+                color: $warning;
+            }
+            p{
+                color: $white;
+            }
+        }
+    }
+}
+
+// Circular Progress
+.circular-progress{
+    position: relative;
+    height: 72px;
+    width: 72px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+
+    &:before{
+        content: "";
+        position: absolute;
+        height: 84%;
+        width: 84%;
+        background-color: $mirage;
+        border-radius: 50%;
+    }
+
+    .value-container{
+        font-family: Rubik;
+        font-weight: 500;
+        position: relative;
+        font-size: 12px;
+        line-height: 20px;
+        color: $white;
+    }
+}
+
+.addOn-para{
+    color: $white-60;
+};
+.addOn-Input{
+    width: 100% !important;
+    margin-top: 8px;
+    padding: 8px 10px !important
+};
+.addOn-Label{
+    margin-top: 24px !important;
+}
